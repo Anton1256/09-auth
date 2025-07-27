@@ -30,6 +30,10 @@ export const metadata: Metadata = {
 
 const Profile = async () => {
   const user = await getServerMe();
+  console.log(user);
+  if (!user) {
+    console.log("unknown user");
+  }
   return (
     <main className={css.mainContent}>
       <div className={css.profileCard}>
